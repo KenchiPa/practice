@@ -1,0 +1,20 @@
+#  .properties ?? .yml? ?????.
+spring:
+  h2:
+    console:
+      enabled: true  # h2 ?? ??
+      path: /h2-console  # localhost:port/h2 ? ?? ??
+      settings:
+        trace: false  # Print additional trace information
+        web-allow-others: true	# ????? ?????? ??
+  profiles:
+    active: local
+  # H2 ??? DB? ?? ??
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:userdb;DB_CLOSE_DELAY=-1  # userdb ???? mem? ??? ??? ???? ??
+    username: sa
+    password:
+  sql:
+    init:
+      encoding: utf-8

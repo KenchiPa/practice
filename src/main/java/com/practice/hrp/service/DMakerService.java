@@ -15,7 +15,7 @@ public class DMakerService {
 
 //  @Autowired
 //  클래스에@RequiredArgsConstructor 해주면 자동으로 주입해준다
-    private DeveloperRepository developerRepository;
+    private final DeveloperRepository developerRepository;
 
     @Transactional
     public void createDeveloper(){
@@ -26,5 +26,7 @@ public class DMakerService {
                 .name("olaf")
                 .age(5)
                 .build();
+
+        developerRepository.save(developer);
     }
 }

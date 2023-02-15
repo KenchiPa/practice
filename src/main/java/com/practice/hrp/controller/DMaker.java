@@ -30,6 +30,7 @@ public class DMaker {
         log.info("GET /create-developers_HTTP/1.1");
 
         dMakerService.createDeveloper();
+        log.info("createDeveloper 서비스 실행 완료");
 //      return Arrays.asList("olaf");
         return List.of("olaf");
 
